@@ -36,15 +36,13 @@ body{
     max-width: 25rem;
     padding: 7.5% 9%;
     border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.review .review-heading {
+.review .review-h3 {
     font-weight: 600;
     line-height: 1.5rem;
     font-size: 1.25rem;
+    padding: 5% 0;
 }
 .review .review-name__opacity{
     opacity: 0.5;
@@ -95,7 +93,7 @@ body{
     top: 0;
     right: 5%;
 }
-.daniel .review-heading{
+.daniel .review-h3{
     position: relative;
     z-index:1;
 }
@@ -128,6 +126,12 @@ body{
     .container .review{
         max-width: initial;
         padding: 1.5rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .review .review-h3 {
+        padding: 0;
     }
     .review .review-p {
         line-height: 1.2rem;
