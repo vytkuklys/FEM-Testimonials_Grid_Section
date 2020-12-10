@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);   
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Light-grayish-blue);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;;
+}
+/*common/general styling for main container*/
+.container{
+    width: 90%;
+    margin: 10% auto 5%;
+    display: grid;
+    grid-row-gap: 2rem;
+    justify-content: center;
+}
+
+.container .review{
+    width: 100%;
+    min-width: 20.25rem;
+    max-width: 25rem;
+    padding: 7.5% 9%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.review .review-heading {
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+}
+.review .review-name__opacity{
+    opacity: 0.5;
+}
+.review .review-p {
+    opacity: 0.7;
+    line-height: 1.1rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+.review .review-profile__flex{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.review .name-wrapper{
+    margin: 2.5rem;
+}
+.review-profile__flex .review-profile-img{
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.review-profile__flex .review-name-wrapper .review-name {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+/*Specific styling for main container*/
+.jonathan, .patrick{
+    color: var(--Light-grayish-blue);
+
+}
+.jeanette, .kira{
+    color: var(--Very-dark-grayish-blue);
+    background-color: var(--White);
+}
+/*Daniel's review*/
+
+.daniel{
+    background-color: var(--Moderate-violet);
+    color: var(--White);
+    position: relative;
+}
+.daniel .quotation{
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+.daniel .review-heading{
+    position: relative;
+    z-index:1;
+}
+.daniel .review-profile-img{
+    border: 0.15rem solid rgba(255, 255, 255, 0.5);
+}
+/*Jonathan's review*/
+.jonathan{
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+/*Patrick review*/
+.review__margin__left{
+    width: 100%;
+}
+.patrick{
+    background-color: var(--Very-dark-blackish-blue);
+}
+.patrick .review-profile-img{
+    border: 0.15rem solid var(--Moderate-violet);
+}
+
+@media only screen and (min-width: 720px) {
+    .container{
+        width: 50%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 18rem 18rem 18rem 18rem;
+        grid-column-gap: 2rem;
+    }
+    .container .review{
+        max-width: initial;
+        padding: 1.5rem 2.5rem;
+    }
+    .review .review-p {
+        line-height: 1.2rem;
+    }
+    .daniel, .patrick{
+        max-width: 35.5rem;
+    }
+    .kira, .jonathan, .jeanette{
+        max-width: 21.6rem;
+    }
+    .daniel{
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    .daniel .quotation{
+        right: 15%;
+    }
+    .kira {
+        grid-area:  2 / 2 / span 2 / span 1;
+    }
+    .patrick {
+        grid-area: 4 / 1 / span 1 / span 2;
+    }
+    
+}
+
+@media only screen and (min-width: 1000px){
+    .container{
+        width: 100%;
+        max-width: 57.75rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 18.5rem 18.5rem 18.5rem 18.5rem;
+    }
+    .patrick {
+        grid-area: 3 / 1 / span 1 / span 2;
+    }
+    .kira {
+        grid-area:  2 / 3 / span 2 / span 1;
+    }
+   
+}
+
+@media only screen and (min-width: 1250px){
+    .container{
+        width: 98%;
+        max-width: 80rem;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: 18.5rem 18.5rem;
+    }
+    .kira {
+        grid-area:  1 / 4 / span 2 / span 1;
+    }
+    .patrick {
+        grid-area: 2 / 2 / span 1 / span 2;
+    }
+    .review .review-heading {
+        margin: 0.5rem auto 1rem;
+    }
+    .review .review-p {
+        font-size: 0.9rem;
+    }
+}
