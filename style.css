@@ -36,6 +36,8 @@ body{
     max-width: 25rem;
     padding: 7.5% 9%;
     border-radius: 0.5rem;
+    -webkit-box-shadow: 36px 44px 35px -30px rgba(0,0,0,0.15); 
+    box-shadow: 36px 44px 35px -30px rgba(0,0,0,0.15);
 }
 
 .review .review-h3 {
@@ -131,10 +133,12 @@ body{
         justify-content: space-evenly;
     }
     .review .review-h3 {
+        font-size: 1.1rem;
         padding: 0;
     }
     .review .review-p {
         line-height: 1.2rem;
+        font-size: 0.75rem;
     }
     .daniel, .patrick{
         max-width: 35.5rem;
@@ -175,7 +179,7 @@ body{
 
 @media only screen and (min-width: 1250px){
     .container{
-        width: 98%;
+        width: 95%;
         max-width: 80rem;
         grid-template-columns: 2fr 1fr 1fr 1fr;
         grid-template-rows: 18.5rem 18.5rem;
