@@ -183,7 +183,7 @@ body{
         width: 95%;
         max-width: 80rem;
         grid-template-columns: 2fr 1fr 1fr 1fr;
-        grid-template-rows: 18.5rem 18.5rem;
+        grid-template-rows: 18rem 18rem;
     }
     .kira {
         grid-area:  1 / 4 / span 2 / span 1;
