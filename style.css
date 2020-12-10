@@ -139,6 +139,7 @@ body{
     .review .review-p {
         line-height: 1.2rem;
         font-size: 0.75rem;
+        line-height: 1.25rem;
     }
     .daniel, .patrick{
         max-width: 35.5rem;
